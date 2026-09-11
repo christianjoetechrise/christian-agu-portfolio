@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Christian Agu is a Backend Developer specializing in Python and Django, building practical web applications and backend systems.">
+
+    <meta name="author"
+          content="Agu Uwakwe Christian">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <title>
+        {% block title %}
+            Christian Agu | Backend Developer
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet"
+          href="{% static 'css/style.css' %}">
+
+    {% block extra_css %}
+    {% endblock %}
+
+</head>
+
+
+<body>
+
+    <header>
+        <nav>
+    <a href="{% url 'home' %}">Christian Agu</a>
+
+    <div>
+        <a href="{% url 'home' %}"
+           class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+            Home
+        </a>
+
+        <a href="{% url 'about' %}"
+           class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+            About
+        </a>
+
+        <a href="{% url 'skills' %}"
+           class="{% if request.resolver_match.url_name == 'skills' %}active{% endif %}">
+            Skills
+        </a>
+
+        <a href="{% url 'experience' %}"
+           class="{% if request.resolver_match.url_name == 'experience' %}active{% endif %}">
+            Experience
+        </a>
+
+        <a href="{% url 'projects' %}"
+           class="{% if request.resolver_match.url_name == 'projects' %}active{% endif %}">
+            Projects
+        </a>
+
+        <a href="{% url 'services' %}"
+           class="{% if request.resolver_match.url_name == 'services' %}active{% endif %}">
+            Services
+        </a>
+
+        <a href="{% url 'resume' %}"
+           class="{% if request.resolver_match.url_name == 'resume' %}active{% endif %}">
+            Resume
+        </a>
+
+        <a href="{% url 'contact' %}"
+           class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+            Contact
+        </a>
+    </div>
+</nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Christian Agu. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

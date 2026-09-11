@@ -1,0 +1,150 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}Contact | Christian Agu{% endblock %}
+
+{% block content %}
+
+<section class="contact-page">
+
+
+<div class="contact-header">
+
+    <p class="section-label">Get In Touch</p>
+
+    <h1>Let's Work Together</h1>
+
+    <p>
+        Have a project, business idea, or opportunity you'd like to
+        discuss? I'd be happy to hear from you.
+    </p>
+
+</div>
+
+
+<div class="contact-content">
+
+    <!-- Contact Information -->
+
+    <div class="contact-info">
+
+        <div class="contact-item">
+            <span>Email</span>
+            <a href="mailto:agu.uwakwe@gmail.com">
+                agu.uwakwe@gmail.com
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <span>Phone</span>
+            <a href="tel:+2347036345744">
+                +234 703 634 5744
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <span>Location</span>
+            <p>Lagos, Nigeria</p>
+        </div>
+
+        <div class="contact-item">
+            <span>GitHub</span>
+            <a href="https://github.com/christianjoetechrise"
+               target="_blank"
+               rel="noopener noreferrer">
+                github.com/christianjoetechrise
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <span>LinkedIn</span>
+            <a href="https://www.linkedin.com/in/agu-uwakwe-96b375206/"
+               target="_blank"
+               rel="noopener noreferrer">
+                linkedin.com/in/agu-uwakwe-96b375206
+            </a>
+        </div>
+
+    </div>
+
+
+    <!-- Contact Form -->
+
+    <div class="contact-action">
+        {% if success %}
+
+<div class="success-message">
+    Your message has been sent successfully.
+    Thank you for reaching out!
+</div>
+
+{% endif %}
+
+        <h2>Have a project in mind?</h2>
+
+        <p>
+            Tell me a little about your project, business idea,
+            or opportunity and I'll get back to you.
+        </p>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <div class="form-group">
+
+                <label for="name">Your Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">Your Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">Message</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="Tell me about your project..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</section>
+
+{% endblock %}

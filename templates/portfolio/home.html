@@ -1,0 +1,195 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}Home | Christian Agu - Backend Developer{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+
+<div class="hero-content">
+
+    <p class="hero-intro">Hello, I'm</p>
+
+    <h1>Christian Agu</h1>
+
+    <h2>Backend Developer</h2>
+
+    <p class="hero-description">
+        I build practical and reliable web applications using
+        Python and Django, with a focus on backend functionality,
+        database management, and clean, maintainable solutions.
+    </p>
+
+    <p class="hero-story">
+        With over five years of professional experience across
+        relationship management, sales, customer service, and
+        operations, I bring strong communication, analytical thinking,
+        leadership, and problem-solving skills into software development.
+    </p>
+
+    <div class="hero-buttons">
+
+        <a href="{% url 'projects' %}" class="btn btn-primary">
+            View My Projects
+        </a>
+
+        <a href="{% url 'contact' %}" class="btn btn-secondary">
+            Contact Me
+        </a>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<section class="career-snapshot">
+
+
+<div class="snapshot-header">
+
+    <p class="section-label">Career Snapshot</p>
+
+    <h2>From Science and Business to Software</h2>
+
+    <p>
+        My professional journey has taken me from engineering and
+        environmental science through customer relationship management,
+        sales, and business operations to backend software development.
+    </p>
+
+</div>
+
+
+<div class="snapshot-grid">
+
+    <div class="snapshot-card">
+
+        <span>01</span>
+
+        <h3>Science &amp; Engineering</h3>
+
+        <p>
+            Academic background spanning Petroleum Engineering and
+            Environmental Science, developing analytical thinking,
+            structured problem-solving, and attention to detail.
+        </p>
+
+    </div>
+
+
+    <div class="snapshot-card">
+
+        <span>02</span>
+
+        <h3>Business &amp; Leadership</h3>
+
+        <p>
+            Over five years of professional experience in customer
+            relationships, sales, marketing, operations, and team
+            coordination across different industries.
+        </p>
+
+    </div>
+
+
+    <div class="snapshot-card">
+
+        <span>03</span>
+
+        <h3>Backend Development</h3>
+
+        <p>
+            Building on my previous experience through practical
+            training and projects using Python, Django, databases,
+            Git, and GitHub.
+        </p>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<section class="what-i-build">
+
+
+<div class="build-header">
+
+    <p class="section-label">What I Build</p>
+
+    <h2>Practical Software Solutions</h2>
+
+    <p>
+        I use Python and Django to develop backend systems and web
+        applications that solve practical problems for businesses,
+        organizations, and individuals.
+    </p>
+
+</div>
+
+
+<div class="build-grid">
+
+    <article class="build-card">
+
+        <span>01</span>
+
+        <h3>Backend Systems</h3>
+
+        <p>
+            Server-side applications with structured business logic,
+            databases, and workflows designed to support reliable
+            digital solutions.
+        </p>
+
+    </article>
+
+
+    <article class="build-card">
+
+        <span>02</span>
+
+        <h3>Django Applications</h3>
+
+        <p>
+            Functional web applications built with Python and Django,
+            including models, forms, views, templates, authentication,
+            and application workflows.
+        </p>
+
+    </article>
+
+
+    <article class="build-card">
+
+        <span>03</span>
+
+        <h3>Business Solutions</h3>
+
+        <p>
+            Digital systems designed to help businesses organize
+            information, manage operations, streamline workflows,
+            and make better use of their data.
+        </p>
+
+    </article>
+
+</div>
+
+
+<div class="build-action">
+
+    <a href="{% url 'services' %}" class="btn btn-primary">
+        Explore My Services
+    </a>
+
+</div>
+
+
+</section>
+
+{% endblock %}

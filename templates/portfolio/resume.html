@@ -1,0 +1,349 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}Resume | Christian Agu{% endblock %}
+
+{% block content %}
+
+<section class="resume-page">
+
+<!-- Resume Header -->
+<div class="resume-header">
+
+    <p class="section-label">My Resume</p>
+
+    <h1>Christian Agu</h1>
+
+    <h2>Backend Developer</h2>
+
+    <p>
+        Backend Developer with hands-on training in Python and Django,
+        backed by over five years of professional experience across
+        relationship management, sales, customer service, operations,
+        and business development. I build practical web applications
+        and backend systems while bringing strong communication,
+        problem-solving, leadership, and business skills.
+    </p>
+
+    <div class="resume-actions">
+        <a href="{% url 'download_cv' %}" class="btn btn-primary">
+            Download CV
+        </a>
+    </div>
+
+</div>
+
+
+<!-- Technical Skills -->
+<div class="resume-section">
+
+    <h2>Technical Skills</h2>
+
+    <div class="resume-skills">
+        <span>Python</span>
+        <span>Django</span>
+        <span>HTML</span>
+        <span>SQLite</span>
+        <span>PostgreSQL</span>
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>VS Code</span>
+        <span>Backend Development</span>
+        <span>Web Application Development</span>
+        <span>Database Management</span>
+    </div>
+
+</div>
+
+
+<!-- Professional Experience -->
+<div class="resume-section">
+
+    <h2>Professional Experience</h2>
+
+    <article class="resume-item">
+
+        <div class="resume-date">
+            Dec 2024 – Dec 2025
+        </div>
+
+        <div>
+            <h3>Sales Manager</h3>
+
+            <h4>Dreammakers Real Estate</h4>
+
+            <p>
+                Led and coordinated sales activities, supported realtors,
+                managed lead generation and conversion, trained team
+                members, and served as a liaison between clients and
+                management to support business growth.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <article class="resume-item">
+
+        <div class="resume-date">
+            May 2023 – Sept 2023
+        </div>
+
+        <div>
+            <h3>Customer Relationship Manager</h3>
+
+            <h4>Xymbolic Development Limited</h4>
+
+            <p>
+                Managed client and realtor communication, handled
+                customer concerns, maintained and restructured
+                client and realtor databases, and supported property
+                inspections and allocation activities.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <article class="resume-item">
+
+        <div class="resume-date">
+            2021 – 2022
+        </div>
+
+        <div>
+            <h3>Relationship Management Executive</h3>
+
+            <h4>Optiva Capital Partners</h4>
+
+            <p>
+                Built and maintained client relationships, generated
+                leads, assisted with applications and product
+                information, and supported the promotion of financial
+                products and services.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <article class="resume-item">
+
+        <div class="resume-date">
+            2019 – 2021
+        </div>
+
+        <div>
+            <h3>Farm Supervisor</h3>
+
+            <h4>Robothel Farms</h4>
+
+            <p>
+                Coordinated daily farm operations and workforce
+                activities, monitored operational processes, supported
+                workplace safety, and ensured timely delivery of farm
+                operations and outputs.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <article class="resume-item">
+
+        <div class="resume-date">
+            2015 – 2018
+        </div>
+
+        <div>
+            <h3>Supervisor &amp; Marketing Manager</h3>
+
+            <h4>Mynx Energy</h4>
+
+            <p>
+                Developed marketing initiatives, supported brand
+                awareness, generated leads, promoted energy services,
+                acquired customers, and contributed to business growth.
+            </p>
+
+        </div>
+
+    </article>
+
+</div>
+
+
+<!-- Education -->
+<div class="resume-section">
+
+    <h2>Education</h2>
+
+    <article class="resume-item">
+
+        <div class="resume-date">
+            2024
+        </div>
+
+        <div>
+            <h3>B.Sc. Environmental Science</h3>
+
+            <h4>
+                Institut Superieur de Communication et de Gestion
+                (ISCG), Benin Republic
+            </h4>
+        </div>
+
+    </article>
+
+
+    <article class="resume-item">
+
+        <div class="resume-date">
+            2014
+        </div>
+
+        <div>
+            <h3>B.Eng. Petroleum Engineering</h3>
+
+            <h4>
+                Federal University of Technology, Owerri (FUTO)
+            </h4>
+        </div>
+
+    </article>
+
+</div>
+
+
+<!-- Technical Training -->
+<div class="resume-section">
+
+    <h2>Technical Training</h2>
+
+    <article class="resume-item">
+
+        <div class="resume-date">
+            Feb 2026 – Aug 2026
+        </div>
+
+        <div>
+
+            <h3>Python &amp; Backend Development</h3>
+
+            <h4>
+                TechRise — LearnFactory Nigeria
+            </h4>
+
+            <p>
+                Completed six months of practical technical training
+                focused on Python, Django, database management,
+                SQLite, PostgreSQL, Git/GitHub, and practical software
+                development projects. LearnFactory certificate obtained;
+                CPN certification pending.
+            </p>
+
+        </div>
+
+    </article>
+
+</div>
+
+
+<!-- Technical Projects -->
+<div class="resume-section">
+
+    <h2>Technical Projects</h2>
+
+    <article class="resume-item">
+
+        <div class="resume-date">
+            Python
+        </div>
+
+        <div>
+
+            <h3>Student Grading System</h3>
+
+            <p>
+                Individual Python project designed to help schools
+                calculate and manage student grades. Developed using
+                Python in VS Code.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <article class="resume-item">
+
+        <div class="resume-date">
+            Django
+        </div>
+
+        <div>
+
+            <h3>AbiaTechConnect</h3>
+
+            <p>
+                Team project built with Django and HTML to connect
+                technology professionals with employers. Contributed
+                to the employer-employee contract workflow.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <article class="resume-item">
+
+        <div class="resume-date">
+            Django
+        </div>
+
+        <div>
+
+            <h3>Business Management System</h3>
+
+            <p>
+                Team-based Django project designed to help business
+                owners manage business activities efficiently and
+                evaluate areas where additional investment may be
+                beneficial.
+            </p>
+
+        </div>
+
+    </article>
+
+</div>
+
+
+<!-- Core Skills -->
+<div class="resume-section">
+
+    <h2>Core Skills</h2>
+
+    <div class="resume-skills">
+        <span>Relationship Management</span>
+        <span>Customer Service</span>
+        <span>Lead Generation</span>
+        <span>Sales &amp; Marketing</span>
+        <span>Team Leadership</span>
+        <span>Communication</span>
+        <span>Problem Solving</span>
+        <span>Database Management</span>
+        <span>Adaptability</span>
+        <span>Time Management</span>
+    </div>
+
+</div>
+
+
+</section>
+
+{% endblock %}
