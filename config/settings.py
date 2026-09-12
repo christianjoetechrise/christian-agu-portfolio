@@ -134,25 +134,17 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
 
-MAILERS = {
-    'default': {
-        'BACKEND': 'django.core.mail.backends.smtp.EmailBackend',
-        'OPTIONS': {
-            'host': 'smtp.gmail.com',
-            'port': 587,
-            'username': os.getenv('EMAIL_HOST_USER'),
-            'password': os.getenv('EMAIL_HOST_PASSWORD'),
-            'use_tls': True,
-        },
-    },
-}
+RESEND_API_KEY = os.getenv("RESEND_API_KEY")
 
 DEFAULT_FROM_EMAIL = os.getenv(
-    'EMAIL_HOST_USER',
-    'agu.uwakwe@gmail.com'
+    "DEFAULT_FROM_EMAIL",
+    "onboarding@resend.dev"
 )
 
-CONTACT_EMAIL = 'agu.uwakwe@gmail.com'
+CONTACT_EMAIL = os.getenv(
+    "CONTACT_EMAIL",
+    "agu.uwakwe@gmail.com"
+)
 
 SECURE_SSL_REDIRECT = not DEBUG
 SESSION_COOKIE_SECURE = not DEBUG

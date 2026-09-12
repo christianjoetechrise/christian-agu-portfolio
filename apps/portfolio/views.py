@@ -1,7 +1,7 @@
 from django.conf import settings
-from django.core.mail import send_mail
 from django.shortcuts import render
 from django.http import FileResponse, Http404
+import resend
 
 def home(request):
     return render(request, 'portfolio/home.html')
@@ -22,12 +22,10 @@ def services(request):
     return render(request, 'portfolio/services.html')
 
 def contact(request):
-
     if request.method == 'POST':
-
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        message = request.POST.get('message')
+        name = request.POST.get('name', '').strip()
+        email = request.POST.get('email', '').strip()
+        message = request.POST.get('message', '').strip()
 
         subject = f'Portfolio Contact Message from {name}'
 
@@ -39,13 +37,14 @@ Message:
 {message}
 """
 
-        send_mail(
-            subject,
-            email_message,
-            settings.DEFAULT_FROM_EMAIL,
-            [settings.CONTACT_EMAIL],
-            fail_silently=False,
-        )
+        resend.api_key = settings.RESEND_API_KEY
+
+        resend.Emails.send({
+            "from": f"Christian Agu Portfolio <{settings.DEFAULT_FROM_EMAIL}>",
+            "to": [settings.CONTACT_EMAIL],
+            "subject": subject,
+            "text": email_message,
+        })
 
         return render(
             request,
